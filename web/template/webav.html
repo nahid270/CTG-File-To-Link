@@ -6,22 +6,20 @@
     <title>TGLinkBase | {{file_name}}</title>
 
     <!-- ==========================================
-         [১] ADS SECTION (আপনার বিজ্ঞাপনের কোড এখানে)
+         [১] ADS SECTION (বিজ্ঞাপন এখন একদম সঠিক)
          ========================================== -->
     
-    <!-- পপ-আন্ডার অ্যাড স্ক্রিপ্ট (Adsterra/PropellerAds) -->
-    <script src="<script src="https://pl28645722.profitablecpmratenetwork.com/90/bc/b1/90bcb162064deb43441aea1a2773ce57.js"></script>
-" async></script>
+    <!-- পপ-আন্ডার অ্যাড স্ক্রিপ্ট -->
+    <script src="https://pl28645722.profitablecpmratenetwork.com/90/bc/b1/90bcb162064deb43441aea1a2773ce57.js" async></script>
 
     <script>
-        // আপনার ডাইরেক্ট অ্যাড লিংক (Direct Link) এখানে বসান (সবচেয়ে বেশি ইনকাম এর জন্য)
+        // আপনার ডাইরেক্ট অ্যাড লিংক (১০০% ইনকাম গ্যারান্টি)
         const MY_DIRECT_AD_LINK = "https://www.profitablecpmratenetwork.com/jxuaz5zk?key=6faf197d33f98bcb3bc070b020c19664"; 
     </script>
+
+    <!-- ব্যানার অ্যাড এর ইনভোক স্ক্রিপ্ট -->
+    <script async="async" data-cfasync="false" src="https://pl28645743.profitablecpmratenetwork.com/2ad2511005f5f27b7a14523c1db25f0b/invoke.js"></script>
     
-    <!-- অন্যান্য বিজ্ঞাপনের স্ক্রিপ্ট -->
-    <script src="<script async="async" data-cfasync="false" src="https://pl28645743.profitablecpmratenetwork.com/2ad2511005f5f27b7a14523c1db25f0b/invoke.js"></script>
-<div id="container-2ad2511005f5f27b7a14523c1db25f0b"></div>
-" async></script>
     <!-- ========================================== -->
 
     <!-- Meta & Icons -->
@@ -80,8 +78,8 @@
     <div class="container">
         
         <!-- [বিজ্ঞাপন ১ - নেটিভ ব্যানার স্লট] -->
-        <div style="margin-bottom: 15px; text-align: center; min-height: 50px;">
-            <!-- নেটিভ অ্যাড কোড এখানে -->
+        <div style="margin-bottom: 15px; text-align: center;">
+            <div id="container-2ad2511005f5f27b7a14523c1db25f0b"></div>
         </div>
 
         <!-- নির্দেশিকা বক্স -->
@@ -121,11 +119,6 @@
             </div>
         </div>
 
-        <!-- [বিজ্ঞাপন ২ - বাটন এর নিচে নেটিভ ব্যানার] -->
-        <div style="margin-top: 20px; text-align: center;">
-             <!-- নেটিভ অ্যাড কোড ২ এখানে -->
-        </div>
-
         <!-- ইউনিভার্স সেকশন -->
         <div style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
             <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
@@ -159,16 +152,16 @@
         const streamUrl = "{{file_url}}";
         const fileName = encodeURIComponent("{{file_name}}");
 
-        // স্মার্ট অ্যাড ট্র্যাকার
+        // স্মার্ট অ্যাড ট্র্যাকার (Double-Click Logic)
         let btnClicks = { download: 0, vlc: 0, mx: 0, copy: 0 };
 
         function handleAdClick(type) {
             if (btnClicks[type] === 0) {
-                // ১ম ক্লিক: বিজ্ঞাপন ওপেন হবে
+                // ১ম ক্লিক: আপনার ডাইরেক্ট অ্যাড লিংক ওপেন হবে
                 window.open(MY_DIRECT_AD_LINK, '_blank');
                 btnClicks[type] = 1;
             } else {
-                // ২য় ক্লিক: অরিজিনাল কাজ
+                // ২য় ক্লিক: অরিজিনাল ভিডিও বা প্লেয়ার ওপেন হবে
                 executeOriginalAction(type);
             }
         }
