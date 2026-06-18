@@ -146,6 +146,10 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 8px 20px var(--accent-glow);
             width: 100%;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-family: 'Outfit', sans-serif;
         }
         .download-btn:hover {
             background: linear-gradient(135deg, #22d3ee, #06b6d4);
@@ -211,9 +215,10 @@
             </div>
         </div>
 
-        <a class="download-btn" href="{{ file_url }}" download="{{ file_name }}">
+        <!-- Triggering custom high speed javascript download function -->
+        <button class="download-btn" onclick="fastDownload()">
             <i data-lucide="download-cloud"></i> Download File
-        </a>
+        </button>
     </div>
 
     <div class="footer">
@@ -228,13 +233,36 @@
 
     <!-- Scripts -->
     <script>
+        const fileUrl = "{{file_url}}";
+        const fileName = "{{file_name}}";
+
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Optional: Clean up file name (removes underscores and dots for a cleaner look)
+        // Optional: Clean up file name
         const nameEl = document.getElementById('fileName');
         if(nameEl) {
             nameEl.innerText = nameEl.innerText.replace(/[\._]/g, ' ');
+        }
+
+        // Clean up URL formatting to ensure fast link resolution
+        function getCleanUrl() {
+            let url = fileUrl.trim();
+            if (url.startsWith("http:https://")) { 
+                url = url.replace("http:https://", "https://"); 
+            }
+            return url;
+        }
+
+        // Direct high-speed dynamic download trigger
+        function fastDownload() {
+            const cleanUrl = getCleanUrl();
+            const a = document.createElement('a');
+            a.href = cleanUrl;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
     </script>
 
